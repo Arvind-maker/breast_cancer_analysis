@@ -38,3 +38,9 @@ print(classification_report(y_test, y_pred))
 # Confusion matrix
 print("\nConfusion Matrix:")
 print(confusion_matrix(y_test, y_pred))
+
+import joblib
+
+# Save the trained model
+joblib.dump(model, 'breast_cancer_model.pkl')
+print("Trained model saved as 'breast_cancer_model.pkl'")
